@@ -55,8 +55,8 @@ MARS-ANS/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/aditdhall/MARS-ANS.git
-cd MARS-ANS
+git clone https://github.com/ProximaCentauric/MarsAutonomousNavigation.git
+cd MarsAutonomousNavigation
 ```
 
 ### 2. Set up conda environment
@@ -89,7 +89,7 @@ streamlit run dashboard.py
 
 ### Train MobileNetV3 (run on Narnia)
 ```bash
-ssh ad6449@narnia.gccis.rit.edu
+ssh <your_username>@<gpu_server>
 tmux attach -t mars
 conda activate mars_ans
 cd ~/MARS-ANS
