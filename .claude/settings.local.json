@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import ast; ast.parse\\(open\\('src/simulation.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('src/simulation.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('src/inference_server.py'\\).read\\(\\)\\); print\\('OK'\\); print\\(sum\\(1 for _ in open\\('src/inference_server.py'\\)\\), 'lines'\\)\")",
+      "Bash(python3 -c 'import ast; ast.parse\\(open\\('\\\\''__TRACKED_VAR__'\\\\''\\).read\\(\\)\\); print\\('\\\\''__TRACKED_VAR__ OK'\\\\''\\)')",
+      "Bash(python3 -c \"import json; nb=json.load\\(open\\('/Users/aditdhall/Desktop/MARS-ANS/notebooks/ANS_Perception.ipynb'\\)\\); print\\('nbformat:', nb.get\\('nbformat'\\), nb.get\\('nbformat_minor'\\)\\); print\\('cells:', len\\(nb['cells']\\)\\); print\\('last cell type:', nb['cells'][-1]['cell_type']\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 /tmp/append_cells.py)",
+      "Bash(python3)",
+      "Bash(grep -n '^    {$\\\\|^  {$' /Users/aditdhall/Desktop/MARS-ANS/notebooks/ANS_Perception.ipynb)",
+      "Bash(git add *)",
+      "Bash(git -c commit.gpgsign=false commit -m \"add unit tests: geometry, H-score, MC dropout, planners, RL env, epsilon decay\")",
+      "Bash(git push *)",
+      "Bash(git commit *)",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('src/evaluate.py'\\).read\\(\\)\\); print\\('OK'\\)\")"
+    ]
+  }
+}
