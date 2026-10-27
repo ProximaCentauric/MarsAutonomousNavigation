@@ -202,9 +202,9 @@ Simulated LiDAR → Slope + Roughness + LiDAR Confidence
 ```
 
 The ANS system uses a three-layer navigation architecture:
-- **Theta*** computes the globally optimal reference path at mission start (shown in blue)
+- **Theta\*** computes the globally optimal reference path at mission start (shown in blue)
 - **RL agent** (Double DQN) drives the rover reactively step by step
-- **D* Lite** overrides the RL agent when perception conflict is detected
+- **D\* Lite** overrides the RL agent when perception conflict is detected
 
 ---
 
