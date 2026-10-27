@@ -100,7 +100,7 @@ streamlit run dashboard.py
 
 ### Train MobileNetV3 (run on Narnia)
 ```bash
-ssh username@gpu_server (Privated)
+ssh <your_username>@<gpu_server>
 tmux attach -t mars
 conda activate mars_ans
 cd ~/MARS-ANS
@@ -132,7 +132,7 @@ and one local running the pygame window.
 
 **Terminal 1 — Narnia (inference server):**
 ```bash
-ssh username@gpu_server #(Privated)
+ssh <your_username>@<gpu_server>
 tmux attach -t mars
 conda activate mars_ans
 cd ~/MARS-ANS
@@ -143,7 +143,7 @@ Detach from tmux with `Ctrl+B, D` — the server keeps running in the background
 
 **Terminal 2 — Local (SSH tunnel, keep open):**
 ```bash
-ssh -L 5000:localhost:5000 username@gpu_server -N #Privated
+ssh -L 5000:localhost:5000 <your_username>@<gpu_server> -N
 ```
 
 **Terminal 3 — Local (pygame window):**
@@ -165,7 +165,7 @@ or fall back to simulated CNN probabilities if not.
 Open Jupyter on Narnia and run all cells in order:
 
 ```bash
-ssh username@gpu_server #(Privated)
+ssh <your_username>@<gpu_server>
 tmux attach -t mars
 conda activate mars_ans
 cd ~/MARS-ANS
@@ -174,7 +174,7 @@ jupyter notebook --no-browser --port=8888
 
 Then on your local machine forward the port:
 ```bash
-ssh -L 8888:localhost:8888 username@gpu_server -N #Privated
+ssh -L 8888:localhost:8888 <your_username>@<gpu_server> -N
 ```
 
 Open `http://localhost:8888` in your browser and run `notebooks/ANS_Perception.ipynb`.
