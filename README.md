@@ -51,6 +51,17 @@ MARS-ANS/
 
 ---
 
+## Author Contributions
+
+- **Adit Dhall:** System architecture design, H-score formulation, sensor fusion design, and integration of all pipeline components.
+- **Thejas Nagesh Gowda:** Traversability literature review, planner design and implementation (Theta*, D* Lite), and simulation development.
+- **Matthew Landon:** Uncertainty quantification literature review, calibration analysis, and Double DQN reinforcement learning agent training.
+
+### Matthew's focus
+Trained the Double DQN agent (5,000 episodes, 94% mission completion) and analyzed how well the MC Dropout uncertainty estimates were calibrated against actual classification errors.
+
+---
+
 ## Setup
 
 ### 1. Clone the repository
@@ -89,7 +100,7 @@ streamlit run dashboard.py
 
 ### Train MobileNetV3 (run on Narnia)
 ```bash
-ssh <your_username>@<gpu_server>
+ssh username@gpu_server (Privated)
 tmux attach -t mars
 conda activate mars_ans
 cd ~/MARS-ANS
@@ -121,7 +132,7 @@ and one local running the pygame window.
 
 **Terminal 1 — Narnia (inference server):**
 ```bash
-ssh ad6449@narnia.gccis.rit.edu
+ssh username@gpu_server #(Privated)
 tmux attach -t mars
 conda activate mars_ans
 cd ~/MARS-ANS
@@ -132,7 +143,7 @@ Detach from tmux with `Ctrl+B, D` — the server keeps running in the background
 
 **Terminal 2 — Local (SSH tunnel, keep open):**
 ```bash
-ssh -L 5000:localhost:5000 ad6449@narnia.gccis.rit.edu -N
+ssh -L 5000:localhost:5000 username@gpu_server -N #Privated
 ```
 
 **Terminal 3 — Local (pygame window):**
@@ -154,7 +165,7 @@ or fall back to simulated CNN probabilities if not.
 Open Jupyter on Narnia and run all cells in order:
 
 ```bash
-ssh ad6449@narnia.gccis.rit.edu
+ssh username@gpu_server #(Privated)
 tmux attach -t mars
 conda activate mars_ans
 cd ~/MARS-ANS
@@ -163,7 +174,7 @@ jupyter notebook --no-browser --port=8888
 
 Then on your local machine forward the port:
 ```bash
-ssh -L 8888:localhost:8888 ad6449@narnia.gccis.rit.edu -N
+ssh -L 8888:localhost:8888 username@gpu_server -N #Privated
 ```
 
 Open `http://localhost:8888` in your browser and run `notebooks/ANS_Perception.ipynb`.
